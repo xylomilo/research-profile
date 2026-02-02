@@ -49,9 +49,8 @@ st.sidebar.markdown("---")
 st.sidebar.markdown("**Current Affiliation**")
 st.sidebar.write(
     """
-    Postdoctoral Fellow  
-    Nano Drug Delivery Unit  
-    University of KwaZulu-Natal
+    Independent Researcher  
+    Durban, KwaZulu-Natal
     """
 )
 
@@ -265,4 +264,5 @@ elif page == "Contact":
 
 st.markdown("---")
 st.caption("© Dr Xylia Q. Peters | Independent Research Profile")
+
 
