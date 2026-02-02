@@ -1,25 +1,21 @@
 # -*- coding: utf-8 -*-
 """
-Spyder Editor
+Created on Tue Fri 30 17:38:34 2026
 
-This is a temporary script file.
+@author: XPeters
 """
 
 import streamlit as st
 from PIL import Image
 import os
 
-# ==================================================
-# Page configuration
-# ==================================================
+# Page configuration- Here we will configure the page for the app
 st.set_page_config(
     page_title="Dr Xylia Q. Peters | Computational Researcher",
     layout="wide"
 )
 
-# ==================================================
-# Helper function to safely load images
-# ==================================================
+# We will use a helper function to load images
 def load_image(path, width=None):
     if os.path.exists(path):
         img = Image.open(path)
@@ -27,9 +23,7 @@ def load_image(path, width=None):
     else:
         st.info(f"Image not found: {path}")
 
-# ==================================================
-# Sidebar Navigation
-# ==================================================
+# We will install a sidebar for navigation purposes
 st.sidebar.title("Navigation")
 
 page = st.sidebar.radio(
@@ -54,9 +48,7 @@ st.sidebar.write(
     """
 )
 
-# ==================================================
-# Header Section
-# ==================================================
+# Code for the Header Section
 col1, col2 = st.columns([1, 3])
 
 with col1:
@@ -76,9 +68,7 @@ with col2:
 
 st.markdown("---")
 
-# ==================================================
-# PAGE CONTENT
-# ==================================================
+# Code for the page content
 if page == "Profile":
     st.header("Researcher Profile")
     st.write(
@@ -264,5 +254,6 @@ elif page == "Contact":
 
 st.markdown("---")
 st.caption("© Dr Xylia Q. Peters | Independent Research Profile")
+
 
 
